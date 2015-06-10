@@ -1,1 +1,2 @@
 [![Build Status](https://travis-ci.org/chanhpark/handy.svg)](https://travis-ci.org/chanhpark/handy)
+[![Coverage Status](https://coveralls.io/repos/chanhpark/handy/badge.svg)](https://coveralls.io/r/chanhpark/handy)
