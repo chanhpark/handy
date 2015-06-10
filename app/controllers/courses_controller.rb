@@ -23,18 +23,20 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
+    @location = [[@course.latitude, @course.longitutde]]
   end
 
   private
 
   def course_params
     params.require(:course).permit(
-      :name,
-      :street_address,
-      :city,
-      :state,
-      :zip_code,
-      :user_id
+        :name,
+        :street_address,
+        :city,
+        :state,
+        :zip_code,
+        :user_id,
+        :phone
     )
   end
 
