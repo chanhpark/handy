@@ -11,12 +11,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'coveralls', require: false, group: :test
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'geocoder'
 
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pry-rails'
 end
 
 
