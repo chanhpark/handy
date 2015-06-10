@@ -13,8 +13,8 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
     @course.user = current_user
     if @course.save
-      flash[:notice] = "Created course successfully!"
-      redirect_to course_path(course)
+      flash[:notice] = "Course created successfully!"
+      redirect_to course_path(@course)
     else
       flash[:notice] = "Error(s) prevented course from being created"
       render :new
@@ -23,7 +23,8 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @location = [[@course.latitude, @course.longitutde]]
+    @location = [[@course.latitude, @course.longitude]]
+    @new_tee = Tee.new
   end
 
   private
@@ -39,5 +40,4 @@ class CoursesController < ApplicationController
         :phone
     )
   end
-
 end
