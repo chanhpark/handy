@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'homes#index'
+  root 'courses#index'
   devise_for :users
 
   resources :courses, only: [:new, :index, :create, :show]
