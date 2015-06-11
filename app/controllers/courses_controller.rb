@@ -25,7 +25,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @location = [[@course.latitude, @course.longitude]]
     @new_tee = Tee.new
-  end
+end
 
   private
 
